@@ -1,0 +1,43 @@
+<resources>
+    <style name="Base.Theme.KotlinWeatherApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimaryDark">@color/background_color</item>
+
+        <!-- Make status and navigation bars transparent -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/logo_blue</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.KotlinWeatherApp</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/weather_x</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
+
+        <!-- Transparent status and navigation bars -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="Theme.SplashTheme.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <!-- Radius of the outer bound of widgets to make the rounded corners -->
+        <item name="appWidgetRadius">16dp</item>
+        <!--
+        Radius of the inner view's bound of widgets to make the rounded corners.
+        It needs to be 8dp or less than the value of appWidgetRadius
+        -->
+        <item name="appWidgetInnerRadius">8dp</item>
+    </style>
+
+    <style name="Theme.SplashTheme.AppWidgetContainer" parent="Theme.SplashTheme.AppWidgetContainerParent">
+        <!-- Apply padding to avoid the content of the widget colliding with the rounded corners -->
+        <item name="appWidgetPadding">16dp</item>
+    </style>
+</resources>
